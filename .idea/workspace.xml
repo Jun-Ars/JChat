@@ -1,11 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="" />
+    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Added date and getters for Message entity">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Command.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageRepositoryInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessagePresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/COMMANDS.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Message.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2JDSBlCltnls7Aomzy7KIxHtz4p" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -17,9 +48,56 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "corretto-18",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="JChat" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.Main" />
+      <module name="JChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Message" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.entities.Message" />
+      <module name="JChat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.entities.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Message" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -28,8 +106,34 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671611026400</updated>
+      <workItem from="1671611027505" duration="23331000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <created>1671611217764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1671611217764</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created Message entity which contains author, array of command and it's target, and the message to be delivered">
+      <created>1671665595713</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1671665595713</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added date and getters for Message entity">
+      <created>1671666418407</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1671666418407</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -41,5 +145,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial commit" />
+    <MESSAGE value="Created Message entity which contains author, array of command and it's target, and the message to be delivered" />
+    <MESSAGE value="Added date and getters for Message entity" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added date and getters for Message entity" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/entities/Message.java</url>
+          <line>66</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
