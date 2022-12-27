@@ -3,7 +3,7 @@ package main.java.entities;
 public class CommonUser implements User{
     private String name;
 
-    CommonUser(String name) {
+    public CommonUser(String name) {
         this.name = name;
     }
 

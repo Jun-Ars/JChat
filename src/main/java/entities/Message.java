@@ -32,19 +32,15 @@ public class Message {
     public User getAuthor() {
         return author;
     }
-
     public String getCommand() {
         return command.getCommand();
     }
-
     public String getTarget() {
         return command.getTarget();
     }
-
     public String getMsg() {
         return msg;
     }
-
     public Date getDateCreated() {
         return dateCreated;
     }

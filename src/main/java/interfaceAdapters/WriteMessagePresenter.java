@@ -11,7 +11,7 @@ public class WriteMessagePresenter implements WriteMessageOutputBoundary {
     }
 
     @Override
-    public WriteMessageFailedException presentError(String error) {
+    public WriteMessageResponseModel presentError(String error) {
         throw new WriteMessageFailedException(error);
     }
 }

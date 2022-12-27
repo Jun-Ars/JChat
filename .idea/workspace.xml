@@ -1,15 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Created test files and added junit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/CommonUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/PinUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
+    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions">
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/PinUserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/entities/UserFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/PinUserValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserFailedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInteractor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserOutputBoundary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserRequestModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserResponseModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/UserRepositoryInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SaveUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/CommonUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/PinUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/PinUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageOutputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessagePresenter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +65,7 @@
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.WriteMessageTest.testMessageCreation">
+  <component name="RunManager" selected="JUnit.SaveUserTest.testPinUserCreation">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JChat" />
@@ -85,6 +99,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SaveUserTest.testPinUserCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JChat" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SaveUserTest" />
+      <option name="METHOD_NAME" value="testPinUserCreation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WriteMessageTest.testMessageCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JChat" />
       <option name="PACKAGE_NAME" value="" />
@@ -97,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SaveUserTest.testPinUserCreation" />
         <item itemvalue="JUnit.WriteMessageTest.testMessageCreation" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
@@ -114,7 +139,7 @@
       <updated>1671611026400</updated>
       <workItem from="1671611027505" duration="24229000" />
       <workItem from="1671857546571" duration="763000" />
-      <workItem from="1672139247272" duration="8329000" />
+      <workItem from="1672139247272" duration="15691000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1671611217764</created>
@@ -172,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672145147729</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions">
+      <created>1672150853617</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1672150853617</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +230,18 @@
     <MESSAGE value="Wrote some quick tests in main.java, will write proper tests shortly" />
     <MESSAGE value="Modified response model to include command and target information." />
     <MESSAGE value="Created test files and added junit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created test files and added junit" />
+    <MESSAGE value="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/WriteMessageTest.java</url>
+          <line>44</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
