@@ -1,5 +1,7 @@
 package main.java.features.writeMessage;
 
+import main.java.entities.User;
+
 public class WriteMessageRequestModel {
     private final String author;
     private final String message;

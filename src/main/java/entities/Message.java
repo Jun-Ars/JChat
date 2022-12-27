@@ -6,13 +6,13 @@ import java.util.List;
 
 public class Message {
     private String id;
-    private final String author;
+    private final User author;
     private final Command command;
     private final String msg;
     private final Date dateCreated = new Date();
 
 
-    public Message(String author, Command command, String msg) {
+    public Message(User author, Command command, String msg) {
         this.author = author;
         this.command = command;
         this.msg = msg;
@@ -21,7 +21,7 @@ public class Message {
     @Override
     public String toString() {
         return "Message{" +
-                "author='" + author + '\'' +
+                "author='" + author.getName() + '\'' +
                 ", command=" + command.getCommand() +
                 ", target=" + command.getTarget() +
                 ", msg='" + msg + '\'' +
@@ -29,7 +29,7 @@ public class Message {
                 '}';
     }
 
-    public String getAuthor() {
+    public User getAuthor() {
         return author;
     }
 
@@ -51,7 +51,7 @@ public class Message {
 
 
     public static class Builder {
-        private String author;
+        private User author;
         private Command command;
         private String msg;
 
@@ -59,7 +59,7 @@ public class Message {
         static final List<String> TARGETTED_COMMANDS = Arrays.asList("dm", "setname");
         static final List<String> COMMANDS = Arrays.asList("help", "quit", "q");
         public Builder setAuthor(String author) {
-            this.author = author;
+            this.author = new CommonUser(author);
             return this;
         }
 

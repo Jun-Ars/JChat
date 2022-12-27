@@ -14,7 +14,7 @@ public class MessageValidator {
             throw new WriteMessageFailedException("Cannot broadcast an empty Message.");
         }
 
-        if ((message.getAuthor() == null || message.getAuthor().isEmpty())) {
+        if ((message.getAuthor() == null || message.getAuthor().getName().isEmpty())) {
             throw new WriteMessageFailedException("Author cannot be blank.");
         }
 
