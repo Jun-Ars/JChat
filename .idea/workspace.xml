@@ -1,29 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions">
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/PinUserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/UserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/PinUserValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/UserRepositoryInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserPresenter.java" afterDir="false" />
+    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Created SaveUser usecase for when CommonUser decides to save their User Account and convert it to a PinUser. Refactored WriteMessage usecase to account for these changes.">
       <change afterPath="$PROJECT_DIR$/src/test/java/SaveUserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/CommonUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/CommonUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/PinUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/PinUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageOutputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageOutputBoundary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/PinUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/PinUserValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +120,7 @@
       <updated>1671611026400</updated>
       <workItem from="1671611027505" duration="24229000" />
       <workItem from="1671857546571" duration="763000" />
-      <workItem from="1672139247272" duration="15691000" />
+      <workItem from="1672139247272" duration="17166000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1671611217764</created>
@@ -204,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672150853617</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created SaveUser usecase for when CommonUser decides to save their User Account and convert it to a PinUser. Refactored WriteMessage usecase to account for these changes.">
+      <created>1672158399113</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1672158399113</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +219,8 @@
     <MESSAGE value="Modified response model to include command and target information." />
     <MESSAGE value="Created test files and added junit" />
     <MESSAGE value="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions" />
+    <MESSAGE value="Created SaveUser usecase for when CommonUser decides to save their User Account and convert it to a PinUser. Refactored WriteMessage usecase to account for these changes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created SaveUser usecase for when CommonUser decides to save their User Account and convert it to a PinUser. Refactored WriteMessage usecase to account for these changes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
