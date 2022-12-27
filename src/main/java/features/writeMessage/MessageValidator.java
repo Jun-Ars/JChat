@@ -9,6 +9,15 @@ public class MessageValidator {
             throw new WriteMessageFailedException("Command and Message both empty.");
         }
 
+        if ((message.getCommand().equals("broadcast"))
+                && (message.getMsg() == null || message.getMsg().isEmpty())) {
+            throw new WriteMessageFailedException("Cannot broadcast an empty Message.");
+        }
+
+        if ((message.getAuthor() == null || message.getAuthor().isEmpty())) {
+            throw new WriteMessageFailedException("Author cannot be blank.");
+        }
+
         if (message.getCommand().equals("dm") && (message.getTarget() == null || message.getTarget().isEmpty())) {
             throw new WriteMessageFailedException("DM Target cannot be empty.");
         }

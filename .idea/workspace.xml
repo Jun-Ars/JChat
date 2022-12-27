@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Added date and getters for Message entity">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/entities/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageRepositoryInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageFailedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageOutputBoundary.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageRequestModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageResponseModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessageController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/WriteMessagePresenter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/COMMANDS.txt" afterDir="false" />
+    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Modified response model to include command and target information.">
+      <change afterPath="$PROJECT_DIR$/src/test/java/WriteMessageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JChat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/JChat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entities/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entities/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +35,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "corretto-18",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.WriteMessageTest.testMessageCreation">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JChat" />
@@ -90,8 +82,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WriteMessageTest.testMessageCreation" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JChat" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="WriteMessageTest" />
+      <option name="METHOD_NAME" value="testMessageCreation" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WriteMessageTest.testMessageCreation" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Message" />
@@ -106,7 +109,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1671611026400</updated>
-      <workItem from="1671611027505" duration="23331000" />
+      <workItem from="1671611027505" duration="24229000" />
+      <workItem from="1671857546571" duration="763000" />
+      <workItem from="1672139247272" duration="5485000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1671611217764</created>
@@ -129,7 +134,35 @@
       <option name="project" value="LOCAL" />
       <updated>1671666418407</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Modified Message to contain data class for command and command target. Added inner class Builder to Message to seperate creation of messages from entity class itself.">
+      <created>1671711611744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1671711611744</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added necessary components for Writing a Message usecase, whilst adhering to clean architecture and SOLID design principles:&#10;-controller/presenter in interface adapter layer&#10;-Input/Output Boundaries/interactor/ds models/validator/exception in usecase layer">
+      <created>1671711747599</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671711747599</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Wrote some quick tests in main.java, will write proper tests shortly">
+      <created>1671711778995</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671711778995</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modified response model to include command and target information.">
+      <created>1672144811911</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672144811911</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,22 +183,10 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Created Message entity which contains author, array of command and it's target, and the message to be delivered" />
     <MESSAGE value="Added date and getters for Message entity" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added date and getters for Message entity" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/entities/Message.java</url>
-          <line>66</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Modified Message to contain data class for command and command target. Added inner class Builder to Message to seperate creation of messages from entity class itself." />
+    <MESSAGE value="Added necessary components for Writing a Message usecase, whilst adhering to clean architecture and SOLID design principles:&#10;-controller/presenter in interface adapter layer&#10;-Input/Output Boundaries/interactor/ds models/validator/exception in usecase layer" />
+    <MESSAGE value="Wrote some quick tests in main.java, will write proper tests shortly" />
+    <MESSAGE value="Modified response model to include command and target information." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified response model to include command and target information." />
   </component>
 </project>
