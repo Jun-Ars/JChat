@@ -19,7 +19,7 @@ public class WriteMessageInteractor implements WriteMessageInputBoundary {
                 .setCommandAndMessage(requestModel.getMessage())
                 .build();
 
-        MessageValidator.ValidateWriteMessage(messageToWrite);
+        MessageValidator.validateWriteMessage(messageToWrite);
 
         WriteMessageResponseModel responseModel = new WriteMessageResponseModel(
                 messageToWrite.getAuthor().getName(),

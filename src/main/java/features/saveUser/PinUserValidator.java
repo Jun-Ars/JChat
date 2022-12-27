@@ -1,13 +1,10 @@
 package main.java.features.saveUser;
 
 import main.java.entities.PinUser;
+import main.java.entities.User;
 
 public class PinUserValidator {
-    public static void ValidatePinUser(final PinUser user) {
-        if (user.getPin() == null || user.getPin().isEmpty()) {
-            throw new SaveUserFailedException("Pin cannot be empty.");
-        }
-
+    public static void validateUsername(final User user) {
         if (user.getName() != null && user.getName().matches(".*\\s.*")) {
             throw new SaveUserFailedException("Username cannot contain whitespace.");
         }
@@ -23,6 +20,13 @@ public class PinUserValidator {
         if (user.getName() == null || user.getName().isEmpty()) {
             throw new SaveUserFailedException("Username cannot be blank.");
         }
+    }
+    public static void validatePin(final PinUser user) {
+        if (user.getPin() == null || user.getPin().isEmpty()) {
+            throw new SaveUserFailedException("Pin cannot be empty.");
+        }
+
+
 
         if (user.getPin().length() < 3) {
             throw new SaveUserFailedException("Pin must be at least 3 characters long.");
@@ -44,5 +48,10 @@ public class PinUserValidator {
         } catch (NumberFormatException e) {
             throw new SaveUserFailedException("Pin must only contain numerical characters.");
         }
+    }
+
+    public static void validate(final PinUser user) {
+        validateUsername(user);
+        validatePin(user);
     }
 }

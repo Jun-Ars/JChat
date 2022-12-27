@@ -22,7 +22,7 @@ public class SaveUserInteractor implements SaveUserInputBoundary{
 
         PinUser userToSave = pinUserFactory.create(requestModel.getUsername(), requestModel.getPin());
 
-        PinUserValidator.ValidatePinUser(userToSave);
+        PinUserValidator.validate(userToSave);
 
         SaveUserResponseModel responseModel = new SaveUserResponseModel(
                 userToSave.getName(),
