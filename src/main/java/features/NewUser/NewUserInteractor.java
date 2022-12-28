@@ -2,7 +2,6 @@ package main.java.features.NewUser;
 
 import main.java.entities.CommonUser;
 import main.java.entities.CommonUserFactory;
-import main.java.features.saveUser.NewUserRequestModel;
 
 public class NewUserInteractor implements NewUserInputBoundary{
     final NewUserRepositoryInterface userRepository;

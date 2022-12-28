@@ -2,7 +2,7 @@ package main.java.interfaceAdapters;
 
 import main.java.features.saveUser.SaveUserInputBoundary;
 import main.java.features.saveUser.SaveUserResponseModel;
-import main.java.features.saveUser.NewUserRequestModel;
+import main.java.features.saveUser.SaveUserRequestModel;
 
 public class SaveUserController{
     final SaveUserInputBoundary saveUserGateway;
@@ -12,7 +12,7 @@ public class SaveUserController{
     }
 
     public SaveUserResponseModel create(String username, String pin) {
-        NewUserRequestModel requestModel = new NewUserRequestModel(username, pin);
+        SaveUserRequestModel requestModel = new SaveUserRequestModel(username, pin);
         return saveUserGateway.create(requestModel);
     }
 }

@@ -15,7 +15,7 @@ public class SaveUserInteractor implements SaveUserInputBoundary{
     }
 
     @Override
-    public SaveUserResponseModel create(NewUserRequestModel requestModel) {
+    public SaveUserResponseModel create(SaveUserRequestModel requestModel) {
 //        if (userRepository.existsByName(requestModel.getUsername())) {
 //            return presenter.presentError("Username already taken.");
 //        }

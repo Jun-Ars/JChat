@@ -1,10 +1,10 @@
 package main.java.features.saveUser;
 
-public class NewUserRequestModel {
+public class SaveUserRequestModel {
     private final String username;
     private final String pin;
 
-    public NewUserRequestModel(String username, String pin) {
+    public SaveUserRequestModel(String username, String pin) {
         this.username = username;
         this.pin = pin;
     }

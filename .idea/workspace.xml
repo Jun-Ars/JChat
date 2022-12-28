@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Modified PinUserValidator to contain seperate methods for validating the pin vs username">
+    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Created usecase for new Common User">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/NewUser/NewUserInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/NewUser/NewUserInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/NewUser/NewUserInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/NewUser/NewUserInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/NewUserRequestModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserRequestModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInputBoundary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInputBoundary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInteractor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaceAdapters/NewUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/NewUserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,7 +32,9 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2JDSBlCltnls7Aomzy7KIxHtz4p" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -39,13 +48,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
     "jdk.selected.JAVA_MODULE": "corretto-18",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.SaveUserTest.testPinUserCreation">
+  <component name="RunManager" selected="JUnit.All in JChat">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JChat" />
@@ -66,15 +77,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Message" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="main.java.entities.Message" />
+    <configuration name="All in JChat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="JChat" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="main.java.entities.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,11 +107,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in JChat" />
         <item itemvalue="JUnit.SaveUserTest.testPinUserCreation" />
         <item itemvalue="JUnit.WriteMessageTest.testMessageCreation" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.Message" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +125,7 @@
       <updated>1671611026400</updated>
       <workItem from="1671611027505" duration="24229000" />
       <workItem from="1671857546571" duration="763000" />
-      <workItem from="1672139247272" duration="18878000" />
+      <workItem from="1672139247272" duration="21729000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1671611217764</created>
@@ -205,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672160195903</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Created usecase for new Common User">
+      <created>1672187349604</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1672187349604</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,7 +248,8 @@
     <MESSAGE value="Created SaveUser usecase for when CommonUser decides to save their User Account and convert it to a PinUser. Refactored WriteMessage usecase to account for these changes." />
     <MESSAGE value="Wrote tests to validate saved user's pin, which must contain only numerical characters and must be between 3-6 characters long. User's name must not contain whitespaces and must be between 3-12 characters long." />
     <MESSAGE value="Modified PinUserValidator to contain seperate methods for validating the pin vs username" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified PinUserValidator to contain seperate methods for validating the pin vs username" />
+    <MESSAGE value="Created usecase for new Common User" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created usecase for new Common User" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
