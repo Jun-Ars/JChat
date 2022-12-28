@@ -4,18 +4,18 @@ import main.java.entities.PinUser;
 import main.java.entities.PinUserFactory;
 
 public class SaveUserInteractor implements SaveUserInputBoundary{
-    final UserRepositoryInterface userRepository;
+    final SaveUserRepositoryInterface userRepository;
     final SaveUserOutputBoundary presenter;
     final PinUserFactory pinUserFactory;
 
-    public SaveUserInteractor(UserRepositoryInterface userRepository, SaveUserOutputBoundary presenter, PinUserFactory pinUserFactory) {
+    public SaveUserInteractor(SaveUserRepositoryInterface userRepository, SaveUserOutputBoundary presenter, PinUserFactory pinUserFactory) {
         this.userRepository = userRepository;
         this.presenter = presenter;
         this.pinUserFactory = pinUserFactory;
     }
 
     @Override
-    public SaveUserResponseModel create(SaveUserRequestModel requestModel) {
+    public SaveUserResponseModel create(NewUserRequestModel requestModel) {
 //        if (userRepository.existsByName(requestModel.getUsername())) {
 //            return presenter.presentError("Username already taken.");
 //        }

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Wrote tests to validate saved user's pin, which must contain only numerical characters and must be between 3-6 characters long. User's name must not contain whitespaces and must be between 3-12 characters long.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/PinUserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/PinUserValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/saveUser/SaveUserInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/MessageValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/features/writeMessage/WriteMessageInteractor.java" afterDir="false" />
+    <list default="true" id="37ee1fa9-7492-4e74-92ba-d4e1e51ab5de" name="Changes" comment="Modified PinUserValidator to contain seperate methods for validating the pin vs username">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/interfaceAdapters/SaveUserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +119,7 @@
       <updated>1671611026400</updated>
       <workItem from="1671611027505" duration="24229000" />
       <workItem from="1671857546571" duration="763000" />
-      <workItem from="1672139247272" duration="17825000" />
+      <workItem from="1672139247272" duration="18878000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1671611217764</created>
@@ -200,7 +198,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672159500725</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Modified PinUserValidator to contain seperate methods for validating the pin vs username">
+      <created>1672160195903</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672160195903</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,7 +234,8 @@
     <MESSAGE value="Added User interface, and CommonUser and PinUser classes which implement User interface, so that Users can keep their name between sessions" />
     <MESSAGE value="Created SaveUser usecase for when CommonUser decides to save their User Account and convert it to a PinUser. Refactored WriteMessage usecase to account for these changes." />
     <MESSAGE value="Wrote tests to validate saved user's pin, which must contain only numerical characters and must be between 3-6 characters long. User's name must not contain whitespaces and must be between 3-12 characters long." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote tests to validate saved user's pin, which must contain only numerical characters and must be between 3-6 characters long. User's name must not contain whitespaces and must be between 3-12 characters long." />
+    <MESSAGE value="Modified PinUserValidator to contain seperate methods for validating the pin vs username" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified PinUserValidator to contain seperate methods for validating the pin vs username" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
